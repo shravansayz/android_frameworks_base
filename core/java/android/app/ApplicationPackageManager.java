@@ -916,7 +916,7 @@ public class ApplicationPackageManager extends PackageManager {
             if (Arrays.asList(featuresTensor).contains(name)) return false;
             if (Arrays.asList(featuresNexus).contains(name)) return true;
         }
-        boolean isTensorDevice = SystemProperties.get("ro.product.model").matches("Pixel [6-9][a-zA-Z ]*");
+        boolean isTensorDevice = SystemProperties.get("ro.product.model").matches("Pixel (6|7|8|9|10)[a-zA-Z ]*");
         if (name != null && Arrays.asList(featuresTensor).contains(name)
                 && !isTensorDevice) {
             return false;
